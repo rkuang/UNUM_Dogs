@@ -15,6 +15,16 @@ This project was made for a coding challenge from UNUM, Inc.
   * Asynchronous loading of images into an ImageView was easy to integrate into the app after Picasso had failed to do so. This is my 
     first time using Glide, as I had been a Picasso user before. Time to make the switch.
 
+## Design Patterns
+I tried to use Design Patterns where necessary.
+* Adapter
+  * Implemented as is necessary for the RecyclerView.
+* Singleton
+  * Used for the DogAPIHelper. Only one instance of this needs to exist at a time. Made simple by the object keyword in Kotlin
+* ModelViewController
+  * This is just kind of how things are done in Android Studio. My model is the Breed class. My view is the main activity layout. My 
+    controller is the main activity class.
+
 ## How it works
 The app displays a list of all breeds of dogs that can be found using the API in a 3-column-grid using Android's RecyclerView
 with a GridLayoutManager.
