@@ -1,4 +1,4 @@
-package rickykuang.com.unum_dogs
+package rickykuang.com.unum_dogs.classes
 
 import android.content.Context
 import android.util.Log
@@ -8,6 +8,7 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
+import rickykuang.com.unum_dogs.adapters.MyAdapter
 
 class DogAPIHelper {
     private lateinit var queue: RequestQueue

@@ -1,10 +1,15 @@
-package rickykuang.com.unum_dogs
+package rickykuang.com.unum_dogs.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.bumptech.glide.RequestManager
+import rickykuang.com.unum_dogs.classes.Breed
+import rickykuang.com.unum_dogs.classes.DogAPIHelper
+import rickykuang.com.unum_dogs.classes.GlideApp
+import rickykuang.com.unum_dogs.R
+import rickykuang.com.unum_dogs.adapters.MyAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView

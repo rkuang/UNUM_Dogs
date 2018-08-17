@@ -1,4 +1,4 @@
-package rickykuang.com.unum_dogs
+package rickykuang.com.unum_dogs.classes
 
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule
