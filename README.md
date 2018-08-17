@@ -2,7 +2,7 @@
 
 This project was made for a coding challenge from UNUM, Inc.
 
-<img src="https://github.com/rkuang/UNUM_Dogs/blob/assets/Screenshot_1534479214.png?raw=true" alt="screenshot" width="400px" height="auto">
+<img src="https://github.com/rkuang/UNUM_Dogs/blob/assets/Screenshot_1534479214.png?raw=true" alt="screenshot" width="400px" height="auto"> <img src="https://github.com/rkuang/UNUM_Dogs/blob/assets/untitled.gif?raw=true" alt="gif" width="400px" height="auto">
 
 ## Dependencies
 * Kotlin
@@ -32,3 +32,9 @@ When the dataset is modified, the RecyclerView's adapter notifies the RecyclerVi
 load the image into the ImageView. I initially used Picasso to handle images, but it took a very large toll on the performance of the app.
 Glide is a newer library that is still supported, and it handles loading images without much difficulty. Built in animation support is a 
 huge plus as well.
+
+## Conclusions
+I spent about 2.5 hours coding up this project. It was a really fun experience learning Kotlin, Dog API, and Glide. I find the practice 
+very valuable as well. This project is definitely something I'll want to expand upon in the future. It'd be nice to make this app more 
+interactive by giving the user the option to click on the different dog breeds and finding out more information or looking at more 
+pictures.
