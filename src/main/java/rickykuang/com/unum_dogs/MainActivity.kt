@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: MyAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
-    private lateinit var myDataset: ArrayList<String>
+    private lateinit var myDataset: ArrayList<Breed>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

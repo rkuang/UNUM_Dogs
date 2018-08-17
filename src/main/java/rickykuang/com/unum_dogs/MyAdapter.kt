@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-class MyAdapter(private val myDataSet : ArrayList<String>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class MyAdapter(private val myDataSet : ArrayList<Breed>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     class ViewHolder(val v : View):  RecyclerView.ViewHolder(v)
 
@@ -18,7 +18,8 @@ class MyAdapter(private val myDataSet : ArrayList<String>) : RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val textView = holder.v.findViewById<TextView>(R.id.textView)
-        textView.setText(myDataSet[position])
+        textView.setText(myDataSet[position].breed)
+        myDataSet[position].imageURL
     }
 
     override fun getItemCount() = myDataSet.size
