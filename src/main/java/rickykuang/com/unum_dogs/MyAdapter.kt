@@ -13,7 +13,7 @@ class MyAdapter(private val myDataSet : ArrayList<String>) : RecyclerView.Adapte
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context)
                 .inflate(R.layout.my_recycler_view_item, parent,false) as View
-        return ViewHolder(v);
+        return ViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

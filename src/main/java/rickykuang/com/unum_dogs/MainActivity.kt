@@ -15,26 +15,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        myDataset = ArrayList<String>();
-        myDataset.add("Hello")
-        myDataset.add("World")
-        myDataset.add("Ricky")
-        myDataset.add("Kuang")
+        myDataset = ArrayList()
 
         viewManager = GridLayoutManager(this, 3)
         viewAdapter = MyAdapter(myDataset)
 
         recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view).apply {
-            // use this setting to improve performance if you know that changes
-            // in content do not change the layout size of the RecyclerView
             setHasFixedSize(true)
-
-            // use a linear layout manager
             layoutManager = viewManager
-
-            // specify an viewAdapter (see also next example)
             adapter = viewAdapter
 
         }
+
+        val dogAPI = DogAPIHelper()
+        dogAPI.getDogBreeds(this, myDataset, viewAdapter)
     }
 }
