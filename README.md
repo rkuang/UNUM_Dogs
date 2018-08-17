@@ -30,4 +30,5 @@ created and added to the RecyclerView's dataset.
 ### Glide
 When the dataset is modified, the RecyclerView's adapter notifies the RecyclerView that it needs to be updated. The app uses Glide to 
 load the image into the ImageView. I initially used Picasso to handle images, but it took a very large toll on the performance of the app.
-Glide is a newer library that is still supported, and it handles loading images without much difficulty.
+Glide is a newer library that is still supported, and it handles loading images without much difficulty. Built in animation support is a 
+huge plus as well.
