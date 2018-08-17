@@ -43,7 +43,6 @@ class DogAPIHelper {
                     Response.ErrorListener { Log.d("API", "failed") } )
 
             queue.add(stringRequest)
-            myAdapter.notifyDataSetChanged()
         }
     }
 }

@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
+import com.bumptech.glide.RequestManager
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -18,7 +19,9 @@ class MainActivity : AppCompatActivity() {
         myDataset = ArrayList()
 
         viewManager = GridLayoutManager(this, 3)
-        viewAdapter = MyAdapter(myDataset)
+
+        val glide: RequestManager = GlideApp.with(this)
+        viewAdapter = MyAdapter(myDataset, glide)
 
         recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view).apply {
             setHasFixedSize(true)
