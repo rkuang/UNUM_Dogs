@@ -32,10 +32,10 @@ class DogAPIHelper {
         while (iter.hasNext()) {
             val breed: String = iter.next()
 
-            val url = "https://dog.ceo/api/breed/$breed/images/random"
+            val url = "https://dog.ceo/api/breed/$breed/images"
             val stringRequest = StringRequest(Request.Method.GET, url,
                     Response.Listener<String> { response ->
-                        val imageURL = JSONObject(response).getString("message")
+                        val imageURL: String = JSONObject(response).getJSONArray("message")[0].toString()
                         Log.d("API", imageURL)
                         myDataset.add(Breed(breed, imageURL))
                         myAdapter.notifyDataSetChanged()
