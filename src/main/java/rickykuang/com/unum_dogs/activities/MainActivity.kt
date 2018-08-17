@@ -32,10 +32,8 @@ class MainActivity : AppCompatActivity() {
             setHasFixedSize(true)
             layoutManager = viewManager
             adapter = viewAdapter
-
         }
 
-        val dogAPI = DogAPIHelper()
-        dogAPI.getDogBreeds(this, myDataset, viewAdapter)
+        DogAPIHelper.getDogBreeds(this, myDataset, viewAdapter)
     }
 }

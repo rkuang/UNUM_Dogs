@@ -10,7 +10,7 @@ import com.android.volley.toolbox.Volley
 import org.json.JSONObject
 import rickykuang.com.unum_dogs.adapters.MyAdapter
 
-class DogAPIHelper {
+object DogAPIHelper {
     private lateinit var queue: RequestQueue
 
     fun getDogBreeds(context: Context, myDataset: ArrayList<Breed>, myAdapter: MyAdapter) {
