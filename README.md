@@ -39,9 +39,13 @@ created and added to the RecyclerView's dataset.
 
 ### Glide
 When the dataset is modified, the RecyclerView's adapter notifies the RecyclerView that it needs to be updated. The app uses Glide to 
-load the image into the ImageView. I initially used Picasso to handle images, but it took a very large toll on the performance of the app.
-Glide is a newer library that is still supported, and it handles loading images without much difficulty. Built in animation support is a 
-huge plus as well.
+load the image into the ImageView. I initially used Picasso to handle images, but it took a very large toll on the performance of the app because it downloads and caches images at full size.
+~~Glide is a newer library that is still supported, and it handles loading images without much difficulty. 
+Built in animation support is a huge plus as well.~~
+Glide was a much better choice for me in this app. With the sheer amount of images to be constantly loaded into recyclerview 
+items, Glide's image caching implementation was simply the better option. Glide downloads and caches images at the size they 
+are loaded into the image. As a result, images initially show up slightly slower due to the preprocessing, but on subsequent
+loads, the images appear much more quickly is far less expensive performance-wise.
 
 ## Conclusions
 I spent about 2.5 hours coding up this project. It was a really fun experience learning Kotlin, Dog API, and Glide. I find the practice 
