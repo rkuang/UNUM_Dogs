@@ -15,6 +15,16 @@ This project was made for a coding challenge from UNUM, Inc.
   * Asynchronous loading of images into an ImageView was easy to integrate into the app after Picasso had failed to do so. This is my 
     first time using Glide, as I had been a Picasso user before. Time to make the switch.
 
+## Design Patterns
+I tried to use Design Patterns where necessary.
+* Adapter
+  * Implemented as is necessary for the RecyclerView.
+* Singleton
+  * Used for the DogAPIHelper. Only one instance of this needs to exist at a time. Made simple by the object keyword in Kotlin
+* ModelViewController
+  * This is just kind of how things are done in Android Studio. My model is the Breed class. My view is the main activity layout. My 
+    controller is the main activity class.
+
 ## How it works
 The app displays a list of all breeds of dogs that can be found using the API in a 3-column-grid using Android's RecyclerView
 with a GridLayoutManager.
@@ -29,9 +39,13 @@ created and added to the RecyclerView's dataset.
 
 ### Glide
 When the dataset is modified, the RecyclerView's adapter notifies the RecyclerView that it needs to be updated. The app uses Glide to 
-load the image into the ImageView. I initially used Picasso to handle images, but it took a very large toll on the performance of the app.
-Glide is a newer library that is still supported, and it handles loading images without much difficulty. Built in animation support is a 
-huge plus as well.
+load the image into the ImageView. I initially used Picasso to handle images, but it took a very large toll on the performance of the app because it downloads and caches images at full size.
+~~Glide is a newer library that is still supported, and it handles loading images without much difficulty. 
+Built in animation support is a huge plus as well.~~
+Glide was a much better choice for me in this app. With the sheer amount of images to be constantly loaded into recyclerview 
+items, Glide's image caching implementation was simply the better option. Glide downloads and caches images at the size they 
+are loaded into the image. As a result, images initially show up slightly slower due to the preprocessing, but on subsequent
+loads, the images appear much more quickly is far less expensive performance-wise.
 
 ## Conclusions
 I spent about 2.5 hours coding up this project. It was a really fun experience learning Kotlin, Dog API, and Glide. I find the practice 
